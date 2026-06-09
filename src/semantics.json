@@ -1,0 +1,9 @@
+[
+  {
+    "name": "customCSS",
+    "type": "text",
+    "label": "CSS Personalizado",
+    "description": "Digite o CSS para personalizar o livro interativo.",
+    "widget": "textarea"
+  }
+]

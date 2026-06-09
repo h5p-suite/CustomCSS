@@ -1,0 +1,10 @@
+/* Biblioteca CustomCSS - Apenas para armazenar estilos personalizados do livro */
+/* Este CSS não aplica estilos diretamente ao conteúdo do livro */
+
+.h5p-custom-css {
+  display: none; /* Esconde qualquer elemento do componente */
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

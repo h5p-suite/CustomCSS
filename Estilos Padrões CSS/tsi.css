@@ -1,0 +1,597 @@
+/* CONFIGURAÇÕES DO LIVRO TSI */
+
+:root {
+    --mainColor : #0080a3;
+    --quizColor : #266fbe;
+}
+
+/* emphasis card (colocar na biblioteca) */
+.h5p-emphasi .type-icon-container {
+    box-shadow: rgba(0, 0, 0, 0.15) 4px 5px 8px;
+}
+
+/* Text Editor */
+.tox .tox-dialog {
+    align-self: flex-start;
+}
+
+/* Titulos */
+h2 {
+    color: var(--mainColor);
+}
+
+h3 {
+    color: var(--mainColor);
+}
+
+.h5p-interactive-book-status-chapter .title {
+    color: var(--mainColor);
+}
+
+.h5p-interactive-book-navigation-maintitle .navigation-title {
+    font-weight: bold;
+    padding: 0.8em;
+}
+
+.h5p-interactive-book-navigation-chapter-button .h5p-interactive-book-navigation-chapter-title-text {
+    color: var(--mainColor);
+    font-weight: 500;
+}
+
+/* imagens */
+.h5p-image>img {
+    width: 100% !important;
+    height: auto !important;
+    /* max-height: 75% !important;
+    */
+    /* border-radius: 15px;
+    */
+    margin: 0 auto;
+}
+
+.h5p-interactive-book-status .h5p-interactive-book-status-button {
+    border-radius: 15px;
+}
+
+.h5p-interactive-book-navigation {
+    box-shadow: none;
+    border-radius: 15px;
+}
+
+.h5p-interactive-book-status {
+    box-shadow: none;
+}
+
+.h5p-interactive-book-navigation-maintitle {
+    background-color: var(--mainColor);
+}
+
+.h5p-interactive-book-status-menu.h5p-interactive-book-status-menu-active {
+    background-color: var(--mainColor);
+}
+
+.h5p-interactive-book-navigation-chapter-button {
+    color: var(--mainColor) !important;
+    text-decoration: none solid var(--mainColor);
+}
+
+a {
+    color: var(--mainColor);
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.h5p-column-ruler {
+    border-bottom: 15px;
+}
+
+.h5p-interactive-book-navigation-sectionlist .h5p-interactive-book-navigation-section .h5p-interactive-book-navigation-section-title {
+    color: #797b7d;
+}
+
+.h5p-interactive-book-navigation-sectionlist .h5p-interactive-book-navigation-section {
+    background: #f4f8ff;
+}
+
+/* listas */
+li.h5p-image-slider-progress-element.h5p-image-slider-current-progress-element:only-child {
+    display: none;
+}
+
+::marker {
+    color: var(--mainColor);
+}
+
+.h5p-advanced-text ul>li {
+    list-style-type: disc;
+}
+
+.h5p-interactive-book-navigation-sectionlist> :first-child {
+    margin-top: 0;
+}
+
+.icon-chapter-blank::before {
+    content: none;
+}
+
+/* navegação à esquerda */
+.h5p-interactive-book-main.h5p-interactive-book-navigation-open .h5p-interactive-book-navigation {
+    max-width: 50%;
+    width: 40vw;
+}
+
+/* Quiz single choice */
+.h5p-single-choice-set .h5p-question-content {
+    background-color: var(--quizColor);
+    padding: 5vw;
+    border-radius: 20px;
+}
+
+.h5p-sc-sound-control {
+    /* icone do som */
+    color: white;
+    padding-top: 4.6vw;
+    padding-right: 5.5vw;
+}
+
+.h5p-sc-question {
+    /* cor do titulo da questao */
+    color: white;
+}
+
+li.h5p-sc-alternative .h5p-sc-label {
+    /* cor da alternativa */
+    color: var(--quizColor);
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+    /* cor do progresso */
+    background-color: #fff;
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative {
+    /* caixinha da alternativa */
+    box-shadow: none;
+    background: #f7faff;
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+    box-shadow: none;
+}
+
+.h5p-joubelui-progressbar-background {
+    /* barrinha de progresso */
+    top: -2px;
+    height: 200%;
+}
+
+.h5p-joubelui-progressbar {
+    /* barrinha de progresso tbm */
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar {
+    background-color: white;
+}
+
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-correct,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-correct:hover,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-correct:active,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-correct:focus {
+    /* certo quando errado */
+    background: #1b8575 !important;
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-reveal-correct .h5p-sc-label {
+    color: #fff;
+}
+
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:hover,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:active,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:focus,
+ul.h5p-sc-alternatives.h5p-sc-selected li.h5p-sc-alternative.h5p-sc-is-wrong.h5p-sc-selected.h5p-sc-reveal-wrong .h5p-sc-progressbar {
+    /* errado quando errado */
+    background: #ad2e25;
+}
+
+/* ICONE QUIZ */
+.h5p-single-choice-set .h5p-question-content::before {
+    /* icone quiz */
+    content: '' !important;
+    height: 60px;
+    width: 180px;
+    background-image: url(https://iili.io/JfbjXi7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: -42px;
+    left: 0;
+    z-index: 1;
+}
+
+.h5p-question {
+    /* local do icone quiz */
+    margin-left: 4px;
+    margin-top: 80px;
+}
+
+.h5p-question-content {
+    /* margem tava troncha */
+    margin: 1em !important;
+}
+
+@media (max-width: 768px) {
+
+    /* só no responsivo */
+    .h5p-question-content::before {
+        max-width: 160px;
+        height: 60px;
+        top: -32px;
+        left: -8px;
+    }
+
+    .h5p-question {
+        margin-left: 0.1vh;
+        margin-top: 0.25vh;
+    }
+
+    .h5p-question-content {
+        margin: -0.03em !important;
+    }
+
+    .h5p-joubelui-progressbar {
+        width: 85%;
+    }
+}
+
+.h5p-question-feedback {
+    /* feedback da questão */
+    color: #fff;
+}
+
+.h5p-joubelui-score-bar-progress {
+    /* cor da barra de progresso respostas questões */
+    background: linear-gradient(to right, #1b8575, #1b8575);
+}
+
+li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-drummed>.h5p-sc-label {
+    /* letra branca quando correto */
+    color: #fff;
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-selected.h5p-sc-reveal-correct .h5p-sc-progressbar {
+    /* cor do certo */
+    background: #1b8575;
+}
+
+li.h5p-sc-alternative.h5p-sc-is-wrong.h5p-sc-drummed>.h5p-sc-label {
+    /* letra branca quando errado */
+    color: #fff;
+}
+
+/* falta deixar a letra branca no certo quando errado */
+/* codigo de ramon */
+.h5p-column-content table {
+    width: 100%;
+}
+
+.h5p-interactive-book-content .h5p-column-content:first-child {
+    margin-top: 1em;
+}
+
+.titulo_2 {
+    margin-left: 8px;
+}
+
+.titulo_3 {
+    margin-left: 16px;
+}
+
+.titulo_4 {
+    margin-left: 24px;
+}
+
+blockquote {
+    padding-left: 48px;
+}
+
+div.h5p-column-content.h5p-video {
+    margin: 32px;
+    margin-top: 48px;
+    padding: 32px;
+    padding-top: 64px;
+    background: #f7e7d7;
+    border-radius: 16px;
+}
+
+@media (max-width: 400px) {
+
+    .h5p-youtube,
+    div.h5p-column-content.h5p-video {
+        margin: 40px;
+        margin-inline: 12px;
+        padding: 12px;
+        padding-top: 24px;
+    }
+
+    .h5p-youtube::before,
+    div.h5p-column-content.h5p-video::before {
+        max-width: 160px;
+        height: 60px;
+        top: -32px;
+        left: -8px;
+    }
+}
+
+/* DRAG THE WORDS */
+.h5p-drag-text {
+    background: var(--quizColor);
+    border-radius: 20px;
+    padding: 13px;
+    overflow: visible;
+}
+
+.h5p-drag-text .h5p-question-introduction,
+.h5p-drag-text .h5p-question-content {
+    color: white;
+}
+
+.h5p-drag-text .h5p-question-introduction {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.h5p-drag-draggables-container {
+    color: var(--quizColor);
+}
+
+.h5p-drag-text .h5p-question-content::before {
+    content: '' !important;
+    height: 60px;
+    width: 180px;
+    background-image: url(https://iili.io/JfbjXi7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: -42px;
+    left: -4px;
+    z-index: 1;
+}
+
+/* CROSSWORD - Palavra Cruzada */
+.h5p-crossword {
+    background: var(--quizColor);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.h5p-crossword .h5p-question-introduction {
+    display: none;
+}
+
+.h5p-crossword-grid .h5p-crossword-cell-empty {
+    background-color: var(--quizColor) !important;
+}
+
+.h5p-crossword-input-fields-group {
+    color: white;
+}
+
+.h5p-interactive-book ::-webkit-scrollbar {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Focus */
+.h5p-crossword .h5p-crossword-cell:not(.h5p-crossword-solution-correct):not(.h5p-crossword-solution-wrong):not(.h5p-crossword-solution-neutral).h5p-crossword-highlight-normal {
+    background-color: #cee0f4;
+}
+
+/* Focus */
+.h5p-crossword .h5p-crossword-cell.h5p-crossword-highlight-normal .h5p-crossword-cell-clue-id-marker, .h5p-crossword .h5p-crossword-cell.h5p-crossword-highlight-normal .h5p-crossword-cell-solution-word-marker {
+    background: #cee0f4;
+    color: var(--quizColor);
+}
+
+/* Focus */
+.h5p-crossword .h5p-crossword-cell.h5p-crossword-highlight-normal .h5p-crossword-cell-canvas {
+    color: black;
+}
+
+.h5p-crossword::before {
+    top: -42px;
+}
+
+.h5p-table th,
+.h5p-table td {
+    padding: 5px !important;
+}
+
+/* TABLE SCROLL */
+.h5p-table-scroll th,
+.h5p-table-scroll td {
+    padding: 0px !important;
+}
+
+.h5p-table-scroll {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.h5p-table-scroll td {
+    border: 2px solid var(--mainColor);
+    text-align: center;
+    padding: 5px;
+}
+
+.h5p-table-scroll tr:first-child {
+    background-color: var(--mainColor);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Aplica a borda branca no topo e na base apenas para as células da primeira linha */
+.h5p-table-scroll tr:first-child td {
+    border-top-color: var(--mainColor);
+    border-bottom-color: var(--mainColor);
+    border-left-color: #fff;
+    border-right-color: #fff;
+}
+
+/* Remove a borda esquerda da primeira célula e a borda direita da última */
+.h5p-table-scroll tr:first-child td:first-child {
+    border-left-color: var(--mainColor);
+}
+
+.h5p-table-scroll tr:first-child td:last-child {
+    border-right-color: var(--mainColor);
+}
+
+.h5p-table-scroll tr:nth-child(even) {
+    background-color: rgba(0, 128, 163, 0.2);
+}
+
+/* Question Set */
+.questionset .h5p-question-content::before {
+    content: '' !important;
+    height: 60px;
+    width: 180px;
+    background-image: url(https://iili.io/JfbjXi7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: -42px;
+    left: 0;
+    z-index: 1;
+}
+
+.questionset .qs-footer {
+    display: none;
+}
+
+/* Container Principal (Fundo Azul) */
+.h5p-multichoice {
+    background-color: var(--quizColor);
+    padding: 5vw;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: visible !important; /* Permite que o ícone do topo saia da caixa */
+    margin: 60px 20px 20px 20px;
+}
+
+/* Ícone de "Quiz" no topo (Mesma imagem do Single Choice) */
+.h5p-multichoice::before {
+    left: -20px !important;
+}
+
+/* Ajuste do texto da pergunta */
+.h5p-multichoice .h5p-question-introduction {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px; /* Espaço para não colidir com o ícone visualmente */
+}
+
+/* Estilo das Alternativas (Caixas Brancas) */
+.h5p-multichoice .h5p-answer .h5p-alternative-container {
+    background-color: #f7faff; /* Mesmo fundo off-white das opções do single choice */
+    color: var(--quizColor);
+    border: none;
+    box-shadow: none; /* Remove sombras padrão do H5P */
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+/* Texto dentro da alternativa */
+.h5p-multichoice .h5p-answer .h5p-alternative-inner {
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+
+/* Estado: Hover */
+.h5p-multichoice .h5p-answer:not(.h5p-correct):not(.h5p-wrong):hover .h5p-alternative-container {
+    background-color: #e3efff;
+    cursor: pointer;
+}
+
+/* Estado: Selecionado (Antes de corrigir) */
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
+    background-color: #1b8575;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Customização dos Radio Buttons/Checkboxes (Bolinhas) */
+/* Bolinha Desmarcada */
+.h5p-multichoice .h5p-answer .h5p-alternative-inner::before {
+    border-color: var(--quizColor);
+    background-color: white;
+    box-shadow: none;
+}
+
+/* Bolinha Marcada */
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-inner::before {
+    border-color: white;
+    background-color: white;
+}
+
+/* O "check" dentro da bolinha marcada */
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-inner::after {
+    color: #1b8575; /* Cor do ícone de check */
+}
+
+/* Resposta Correta Revelada */
+.h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container {
+    background-color: #1b8575 !important;
+    color: white !important;
+    border: 2px solid white;
+}
+
+/* Resposta Errada Revelada */
+.h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container {
+    background-color: #ad2e25 !important; /* Vermelho erro do backup.css */
+    color: white !important;
+    border: 2px solid white;
+}
+
+/* Ajuste de Imagens dentro da questão (para não ficarem "soltas" no fundo azul) */
+.h5p-multichoice .h5p-question-image img {
+    border-radius: 10px;
+    background: white; /* Garante fundo branco se a imagem for PNG transparente */
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .h5p-multichoice::before {
+        max-width: 160px;
+        height: 60px;
+        top: -32px;
+        left: -8px;
+    }
+
+    .h5p-multichoice {
+        margin: 0.5em !important;
+        padding: 8vw;
+    }
+    
+    .h5p-multichoice .h5p-question-introduction {
+        margin-top: 25px;
+    }
+}

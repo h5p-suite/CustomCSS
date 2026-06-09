@@ -1,0 +1,25 @@
+{
+  "title": "CustomCSS",
+  "contentType": "Static content",
+  "description": "Simple library that displays text.",
+  "majorVersion": 1,
+  "minorVersion": 1,
+  "patchVersion": 22,
+  "runnable": 1,
+  "machineName": "H5P.CustomCSS",
+  "author": "LuizGustavoR",
+  "preloadedJs": [
+    {
+      "path": "scripts/CSS.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "styles/CSS.css"
+    }
+  ],
+  "metadataSettings": {
+    "disable": 0,
+    "disableExtraTitleField": 1
+  }
+}

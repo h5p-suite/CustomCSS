@@ -1,0 +1,2812 @@
+@import url(https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
+
+:root {
+  /* Brand & Primary Colors */
+  --color-primary: #681ea4;
+  --color-primary-dark: #511385;
+  --color-primary-hover-bg: #681ea41a;
+  --color-primary-focus-shadow: rgba(81, 19, 133, 0.8);
+  --color-primary-focus-shadow-alt: rgba(102, 27, 134, 0.8);
+
+  /* Secondary / Interactive Colors */
+  --color-secondary: #266fbe;
+  --color-secondary-light: #f7faff;
+  --color-interactive-link: #0080a3;
+  --color-interactive-link-hover: #00607a;
+
+  /* Feedback Colors */
+  --color-success: #1b8575;
+  --color-danger: #ad2e25;
+
+  /* Text Colors */
+  --color-text-primary: #333;
+  --color-text-secondary: #4c4452;
+  --color-text-subtle: #797b7d;
+  --color-text-on-primary: #ffffff;
+  --color-text-on-secondary: #ffffff;
+  --color-text-heading: #681ea4;
+
+  /* Background & Border Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-bg-body: #ffffff;
+  --color-bg-subtle: #f9f9f9;
+  --color-bg-interactive: #f4f8ff;
+  --color-bg-highlight: #f7e7d7;
+  --color-bg-dialog: #e6dcd2;
+  --color-border-subtle: #e9e4ed;
+  --color-border-light: #eee;
+  --color-border-table: #681ea4;
+
+  /* CSS Variables used in H5P */
+  --color-base: #681ea4;
+  --color-text: #ffffff;
+  --color-base-5: rgba(104, 30, 164, 0.05);
+  --color-base-10: rgba(104, 30, 164, 0.1);
+  --color-base-20: rgba(104, 30, 164, 0.2);
+  --color-base-75: #6821a1;
+  --color-base-80: #681ba7;
+  --color-base-85: #6717a8;
+  --color-base-90: rgba(104, 30, 164, 0.9);
+  --color-base-95: #681ea4f2;
+  --color-contrast: #2d7ad2;
+
+  /* Other colors */
+  --color-scrollbar-thumb: rgba(108, 121, 146, 0.75);
+  --color-scrollbar-thumb-hover: #6c7992;
+  --color-scrollbar-track: rgba(108, 121, 146, 0.35);
+  --color-black-alpha-15: rgba(0, 0, 0, 0.15);
+  --color-black-alpha-20: rgba(0, 0, 0, 0.2);
+  --color-black-alpha-35: rgba(0, 0, 0, 0.35);
+  --color-grey-alpha-20: rgba(166, 166, 166, 0.2);
+  --color-grey-alpha-30: rgba(219, 219, 219, 0.3);
+  --color-grey-alpha-40: rgba(166, 166, 166, 0.4);
+  --color-grey-alpha-50: rgba(228, 228, 237, 0.5);
+  --color-teal-alpha-20: rgba(0, 128, 163, 0.2);
+}
+
+/* --- Layout & Basic Structure --- */
+
+.openingContainer {
+  margin: 70px 60px 40px 30px;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation {
+  max-width: 100%;
+  width: 100%;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation
+  .large-navigation-list {
+  height: auto;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation-chapter-accordion {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation-chapter-button {
+  background-color: var(--color-white);
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation-chapter-button.h5p-interactive-book-astro-navigation-current {
+  border-bottom: solid 1px var(--color-border-subtle);
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation-sectionlist {
+  max-height: none;
+  overflow: inherit;
+  transition: max-height 0.5s ease-in;
+  visibility: inherit;
+  padding-left: 0.3rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-content {
+  display: none;
+}
+
+.h5p-interactive-book-astro
+  .h5p-interactive-book-astro-navigation-hidden
+  .h5p-interactive-book-astro-navigation {
+  display: none;
+}
+
+.h5p-interactive-book-astro.h5p-scrollable-fullscreen.h5p-semi-fullscreen {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.h5p-interactive-book-astro .h5p-scrollable-fullscreen {
+  overflow-y: auto;
+}
+
+.h5p-interactive-book-astro.h5p-fullscreen {
+  background-color: var(--color-white);
+}
+
+.h5p-interactive-book-astro .h5p-content-controls {
+  display: none;
+}
+
+/* --- Custom Scrollbar --- */
+
+.h5p-interactive-book-astro ::-webkit-scrollbar {
+  width: 6px;
+  background: var(--color-scrollbar-track);
+}
+
+.h5p-interactive-book-astro ::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.h5p-interactive-book-astro ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+/* --- Layout & Fullscreen --- */
+
+.h5p-interactive-book-astro-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.h5p-interactive-book-astro-main.h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation {
+  max-width: 16.563em;
+  width: 16.563em;
+}
+
+.h5p-content-hidden .h5p-interactive-book-astro-cover-present {
+  display: none;
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro,
+.h5p-semi-fullscreen .h5p-interactive-book-astro {
+  display: flex;
+  flex-direction: column;
+}
+
+.h5p-fullscreen
+  .h5p-interactive-book-astro.edge-18
+  .h5p-interactive-book-astro-status,
+.h5p-semi-fullscreen
+  .h5p-interactive-book-astro.edge-18
+  .h5p-interactive-book-astro-status {
+  padding-right: 9em;
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro .h5p-interactive-book-astro-content,
+.h5p-semi-fullscreen
+  .h5p-interactive-book-astro
+  .h5p-interactive-book-astro-content {
+  padding-bottom: 4.5em;
+}
+
+.h5p-fullscreen
+  .h5p-interactive-book-astro
+  .h5p-interactive-book-astro-status-footer,
+.h5p-semi-fullscreen
+  .h5p-interactive-book-astro
+  .h5p-interactive-book-astro-status-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro-main,
+.h5p-semi-fullscreen .h5p-interactive-book-astro-main {
+  flex: 1;
+  overflow: auto;
+}
+
+.h5p-fullscreen
+  .h5p-interactive-book-astro-main
+  .h5p-interactive-book-astro-content,
+.h5p-semi-fullscreen
+  .h5p-interactive-book-astro-main
+  .h5p-interactive-book-astro-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: calc(100% - 5.5em);
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro-navigation,
+.h5p-semi-fullscreen .h5p-interactive-book-astro-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro-navigation .navigation-list,
+.h5p-semi-fullscreen .h5p-interactive-book-astro-navigation .navigation-list {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.h5p-fullscreen .h5p-interactive-book-astro-navigation .large-navigation-list,
+.h5p-semi-fullscreen
+  .h5p-interactive-book-astro-navigation
+  .large-navigation-list {
+  min-height: 1px;
+}
+
+/* --- Content Area & Chapters --- */
+
+.h5p-interactive-book-astro-chapter {
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(0);
+  transition: 0.25s;
+  width: 100%;
+}
+
+.h5p-interactive-book-astro-chapter.h5p-interactive-book-astro-previous {
+  transform: translateX(-100%);
+}
+
+.h5p-interactive-book-astro-chapter.h5p-interactive-book-astro-current {
+  display: block;
+  transform: translateX(0);
+  font-family: "Sarabun", sans-serif;
+}
+
+.h5p-interactive-book-astro-chapter.h5p-interactive-book-astro-next {
+  transform: translateX(100%);
+}
+
+.h5p-interactive-book-astro-chapter > div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1058px;
+}
+
+.h5p-interactive-book-astro-animate {
+  display: block;
+  transition: transform 0.25s ease-in-out;
+}
+
+.h5p-interactive-book-astro-content {
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.h5p-interactive-book-astro-content.hidden {
+  display: none;
+}
+
+.h5p-interactive-book-astro-content .h5p-column-content {
+  max-height: 9999999px;
+}
+
+.h5p-interactive-book-astro-content .h5p-column-content:first-child {
+  margin-top: 0;
+}
+
+.h5p-interactive-book-astro-content .h5p-column-content:first-child > p {
+  margin-top: 0;
+}
+
+.h5p-interactive-book-astro-status-progress-marker {
+  align-items: center;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  padding: 1em 0 0 1em;
+  clear: both;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-status-progress-marker input[type="checkbox"] {
+  transform: scale(1.75);
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-status-progress-marker p {
+  color: var(--color-text-secondary);
+  font-weight: bold;
+  margin: 0;
+  padding-left: 1em;
+}
+
+.h5p-content-hidden {
+  display: none;
+}
+
+.h5p-course-presentation .h5p-wrapper {
+  height: 596px;
+}
+
+/* --- Status Bar & Footer --- */
+
+.h5p-interactive-book-astro-status {
+  align-items: center;
+  background-color: var(--color-white);
+  background-size: cover;
+  border: 0;
+  border-color: var(--color-base);
+  border-style: solid;
+  box-shadow: 10px 10px 30px var(--color-grey-alpha-20);
+  display: flex;
+  overflow: hidden;
+  padding: 0.5em;
+}
+
+.h5p-interactive-book-astro-status .h5p-interactive-book-astro-status-button {
+  align-items: center;
+  border-radius: 3px;
+  display: flex;
+  height: 3.6em;
+  padding: 0;
+  width: 3.6em;
+}
+
+.h5p-interactive-book-astro-status-button {
+  border-radius: 3px;
+}
+
+.h5p-interactive-book-astro-status-button:hover {
+  background-color: var(--color-base-10);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-status-button:active {
+  background-color: var(--color-base-20);
+  background-size: cover;
+}
+
+.h5p-interactive-book-astro-status-button[disabled]:hover {
+  background-color: var(--color-transparent);
+  cursor: default;
+}
+
+.h5p-interactive-book-astro-status-fullscreen {
+  background-color: var(--color-base-5);
+  background-size: cover;
+  border: 0.125em solid var(--color-white);
+  flex-shrink: 0;
+  justify-content: center;
+  order: 5;
+}
+
+.h5p-interactive-book-astro-status-fullscreen.h5p-interactive-book-astro-enter-fullscreen::before {
+  color: var(--color-base);
+  content: "";
+  font-family: "h5p-book";
+  font-size: 1.2em;
+}
+
+.h5p-interactive-book-astro-status-fullscreen.h5p-interactive-book-astro-exit-fullscreen::before {
+  font-size: 1.2em;
+  color: var(--color-base);
+  content: "";
+  font-family: "h5p-book";
+}
+
+.h5p-interactive-book-astro-status-menu {
+  background-color: var(--color-white);
+  background-size: cover;
+  border: 2px solid var(--color-white);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.h5p-interactive-book-astro-status-menu .icon-menu {
+  color: var(--color-base);
+  font-size: 1.5em;
+  margin: auto;
+}
+
+.h5p-interactive-book-astro-status-menu.h5p-interactive-book-astro-status-menu-active {
+  background-color: var(--color-base);
+  opacity: 20;
+  position: relative;
+}
+
+.h5p-interactive-book-astro-status-menu.h5p-interactive-book-astro-status-menu-active
+  .icon-menu {
+  color: var(--color-white);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h5p-interactive-book-astro-status-menu.h5p-interactive-book-astro-status-menu-active:hover {
+  background-color: var(--color-base-90);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-status-menu.h5p-interactive-book-astro-status-menu-active:active {
+  background-color: var(--color-base-95);
+  background-size: cover;
+}
+
+.h5p-interactive-book-astro-status-menu.h5p-interactive-book-astro-status-menu-active:focus-visible {
+  outline-color: var(--color-base);
+  outline-offset: 1px;
+}
+
+.h5p-interactive-book-astro-status-progress-wrapper {
+  flex-shrink: 0;
+  margin-right: 2em;
+  order: 2;
+}
+
+.h5p-interactive-book-astro-status-progress {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.h5p-interactive-book-astro-status-progress .hidden-but-read {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.h5p-interactive-book-astro-status-progress-number {
+  color: var(--color-base);
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+  text-decoration: none solid var(--color-base);
+}
+
+.h5p-interactive-book-astro-status-progress-divider {
+  color: var(--color-text-secondary);
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+  text-decoration: none solid var(--color-text-secondary);
+}
+
+.h5p-interactive-book-astro-status-progressbar-back {
+  background-color: var(--color-base-20);
+  background-size: cover;
+  width: 100%;
+}
+
+.h5p-interactive-book-astro-status-progressbar-front {
+  background-color: var(--color-primary); /* #3642ae -> Overridden by #681ea4 */
+  height: 0.313em;
+  transition: 1s;
+}
+
+.h5p-interactive-book-astro-status-chapter {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.h5p-interactive-book-astro-status-chapter .title {
+  color: var(--color-text-secondary);
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-decoration: none solid var(--color-text-secondary);
+  text-overflow: ellipsis;
+}
+
+.h5p-interactive-book-astro-status-arrow {
+  background-color: var(--color-base-5);
+  background-size: cover;
+  border: 0.125em solid var(--color-white);
+  border-radius: 3px;
+  flex-shrink: 0;
+  height: 2.75em;
+  width: 2.75em;
+}
+
+.h5p-interactive-book-astro-status-arrow.previous {
+  order: 3;
+}
+
+.h5p-interactive-book-astro-status-arrow.next {
+  order: 4;
+}
+
+.h5p-interactive-book-astro-status-arrow .navigation-button {
+  background: var(--color-transparent);
+  border: 0;
+  color: var(--color-base);
+  font-size: 1.5em;
+  margin: auto;
+}
+
+.h5p-interactive-book-astro-status-arrow .navigation-button.disabled {
+  opacity: 0.5;
+}
+
+.h5p-interactive-book-astro-status-header {
+  -webkit-position: sticky;
+  position: sticky;
+  background: var(--color-white);
+  top: 0;
+  z-index: 2;
+}
+
+.h5p-interactive-book-astro-status-header
+  .h5p-interactive-book-astro-status-to-top {
+  display: none;
+}
+
+.h5p-interactive-book-astro-status-footer {
+  bottom: 0;
+}
+
+.h5p-interactive-book-astro-status-footer
+  .h5p-interactive-book-astro-status-menu {
+  display: none;
+}
+
+.h5p-interactive-book-astro-status-footer.footer-hidden {
+  display: none;
+}
+
+/* --- Navigation Menu --- */
+
+.h5p-interactive-book-astro-navigation {
+  background-color: var(--color-white);
+  background-size: cover;
+  box-shadow: 0.625em 0.625em 1.875em var(--color-grey-alpha-20);
+  max-width: 0;
+  min-height: 19em;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  transition: width 0.15s linear, flex-basis 0.15s linear,
+    max-width 0.15s linear;
+  width: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.h5p-interactive-book-astro-navigation > a {
+  font-weight: bold;
+}
+
+.h5p-interactive-book-astro-navigation > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.h5p-interactive-book-astro-navigation .navigation-list {
+  margin: 0;
+  padding: 0;
+}
+
+.h5p-interactive-book-astro-navigation .large-navigation-list {
+  height: 0;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 58em;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist {
+  background-color: var(--color-white);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.5s ease-in;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist > :first-child {
+  margin-top: 0.5em;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist > :last-child {
+  border-bottom: solid 1px var(--color-border-subtle);
+  padding-bottom: 0.5em;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist
+  .h5p-interactive-book-astro-navigation-section {
+  background: var(--color-transparent);
+  color: var(--color-text-secondary);
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist
+  .h5p-interactive-book-astro-navigation-section
+  .section-button {
+  position: relative;
+  background: var(--color-transparent);
+  border: 0;
+  padding: 0 1.125em;
+  max-width: 100%;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist
+  .h5p-interactive-book-astro-navigation-section
+  .h5p-interactive-book-astro-navigation-section-icon {
+  position: absolute;
+  color: var(--color-black);
+  font-size: 5px;
+  visibility: hidden;
+  width: 2.17em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist
+  .h5p-interactive-book-astro-navigation-section
+  .h5p-interactive-book-astro-navigation-section-icon.h5p-interactive-book-astro-navigation-section-task {
+  visibility: inherit;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist
+  .h5p-interactive-book-astro-navigation-section
+  .h5p-interactive-book-astro-navigation-section-title {
+  font-size: 0.85em;
+  margin-left: 15px;
+  margin-right: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.h5p-interactive-book-astro-navigation-sectionlist :hover {
+  color: var(--color-base);
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-navigation-closed
+  .h5p-interactive-book-astro-navigation-chapter-button {
+  background-color: var(--color-white);
+}
+
+.h5p-interactive-book-astro-navigation-closed
+  .h5p-interactive-book-astro-navigation-chapter-button
+  .h5p-interactive-book-astro-navigation-chapter-title-text {
+  color: var(--color-text-secondary);
+}
+
+.h5p-interactive-book-astro-navigation-closed
+  .h5p-interactive-book-astro-navigation-sectionlist {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  visibility: hidden;
+}
+
+.h5p-interactive-book-astro-navigation-chapter {
+  list-style: none;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button {
+  align-items: center;
+  background-color: var(--color-base-10);
+  background-size: cover;
+  border: 0;
+  border-bottom: solid 1px var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  display: flex;
+  font-family: Arial;
+  height: 3.438em;
+  margin: 0;
+  padding: 0 1.125em;
+  text-align: initial;
+  text-decoration: none solid var(--color-text-secondary);
+  width: 100%;
+  position: relative;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button.h5p-interactive-book-astro-navigation-current {
+  background-color: var(--color-base-10);
+  border-bottom-color: var(--color-white);
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button:hover {
+  background-color: var(--color-base-5);
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button
+  .h5p-interactive-book-astro-navigation-chapter-title-text {
+  background-color: var(--color-transparent);
+  color: var(--color-base);
+  font-family: Arial;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 2em;
+  overflow: hidden;
+  text-decoration: none solid var(--color-base);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button
+  .h5p-interactive-book-astro-navigation-chapter-accordion {
+  align-self: center;
+  font-size: 0.65em;
+  width: 1em;
+  position: absolute;
+  left: 15px;
+  top: 17px;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button
+  .h5p-interactive-book-astro-navigation-chapter-accordion.hidden {
+  opacity: 0;
+  visibility: none;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button
+  .h5p-interactive-book-astro-navigation-chapter-progress {
+  align-self: center;
+  font-size: 0.75em;
+  position: absolute;
+  right: 15px;
+  top: 17px;
+}
+
+.h5p-interactive-book-astro-navigation-chapter-button:active {
+  background-color: var(--color-base-10);
+}
+
+.h5p-interactive-book-astro-navigation-maintitle {
+  background-color: var(--color-primary); /* #3642ae -> Overridden by #681ea4 */
+  background-size: cover;
+}
+
+.h5p-interactive-book-astro-navigation-maintitle .navigation-title {
+  align-self: center;
+  color: var(--color-text);
+  font-family: Arial;
+  font-size: 1em;
+  font-weight: 400;
+  overflow: hidden;
+  padding-left: 1.25em;
+  text-decoration: none solid var(--color-text);
+  text-overflow: ellipsis;
+}
+
+/* --- Cover Page --- */
+
+.h5p-interactive-book-astro-cover {
+  align-items: center;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  height: 100%;
+  left: 0;
+  padding-bottom: 200px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.h5p-interactive-book-astro-cover.h5p-cover-nographics {
+  padding-top: 120px;
+}
+
+.h5p-interactive-book-astro-cover p {
+  margin: 0 0 0.5em;
+}
+
+.h5p-interactive-book-astro-cover-graphics {
+  align-items: center;
+  display: flex;
+  height: 15em;
+  justify-content: center;
+  margin: 4.375em 0;
+  position: relative;
+  width: 100%;
+}
+
+.h5p-interactive-book-astro-cover-graphics.h5p-image > img,
+.h5p-interactive-book-astro-cover-graphics.h5p-video > video,
+.h5p-interactive-book-astro-cover-graphics.h5p-video.h5p-youtube
+  > div:not(.h5p-interactive-book-astro-cover-bar) {
+  box-shadow: 0.5em 0.25em 3em 0 var(--color-black-alpha-20);
+  position: absolute;
+  left: 50%;
+  max-height: 15em;
+  min-width: 20em;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h5p-interactive-book-astro-cover-graphics.h5p-image > img,
+.h5p-interactive-book-astro-cover-graphics.h5p-video > video {
+  max-width: 85%;
+}
+
+.h5p-interactive-book-astro-cover-graphics.h5p-video.h5p-youtube
+  > div:not(.h5p-interactive-book-astro-cover-bar) {
+  max-width: 26.666em;
+}
+
+.h5p-interactive-book-astro-cover-bar {
+  background-color: var(--color-base-5);
+  background-size: cover;
+  height: 70%;
+  width: inherit;
+}
+
+.h5p-interactive-book-astro-cover-image {
+  box-shadow: 10px 4px 47px 0 var(--color-black-alpha-20);
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.h5p-interactive-book-astro-cover-title {
+  color: #363636;
+  font-size: 2.188em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none solid #363636;
+  line-height: initial;
+}
+
+.h5p-interactive-book-astro-cover-description {
+  color: #363636;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  width: 80%;
+  text-decoration: none solid #363636;
+}
+
+.h5p-interactive-book-astro-cover-readbutton {
+  margin-top: 0.5em;
+}
+
+.h5p-interactive-book-astro-cover-readbutton button {
+  background-color: var(--color-base);
+  background-size: cover;
+  border: 0;
+  border-radius: 3px;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none solid var(--color-text);
+}
+
+.h5p-interactive-book-astro-cover-readbutton button:hover {
+  background-color: var(--color-base-90);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-cover-readbutton button:active {
+  background-color: var(--color-base-95);
+  background-size: cover;
+}
+
+.h5p-interactive-book-astro-cover-readbutton button:focus {
+  outline-style: double;
+}
+
+.h5p-container.covered .h5p-content-controls {
+  display: none;
+}
+
+/* --- Summary Page --- */
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-box-summary-progress {
+  display: block;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-box-summary-progress
+  > div {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-menu-button {
+  justify-content: center;
+  border-width: 0.125rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-menu-button-arrow {
+  visibility: visible;
+  opacity: 1;
+  right: 0.6875rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-buttons {
+  display: flex;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-button {
+  margin-right: initial;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submit {
+  flex-grow: 6;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-restart {
+  flex-grow: 4;
+  margin-left: 0.5rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-score-bar {
+  margin-top: 1.25rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-summary-page {
+  padding: 0.5rem;
+}
+
+.h5p-interactive-book-astro.h5p-interactive-book-astro-small
+  .h5p-interactive-book-astro-navigation-open
+  .h5p-interactive-book-astro-navigation-chapter-button.h5p-interactive-book-astro-navigation-current[aria-expanded="true"] {
+  border-bottom-color: #0e7c57;
+  border-bottom-width: 2px;
+}
+
+.h5p-interactive-book-astro-summary {
+  padding: 0 1.125rem;
+  margin: 0.7rem auto;
+}
+
+.h5p-interactive-book-astro-summary-menu-button {
+  border: 1px solid #0e7c57;
+  border-radius: 2px;
+  background-color: var(--color-white);
+  font-size: 0.8rem;
+  color: #0d736e;
+  font-weight: 700;
+  line-height: 1rem;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.h5p-interactive-book-astro-summary-menu-button.h5p-interactive-book-astro-navigation-chapter-button.h5p-interactive-book-astro-navigation-current {
+  background-color: #f1f9f8;
+  border-bottom-color: #0e7c57;
+}
+
+.h5p-interactive-book-astro-summary-menu-button:hover {
+  background-color: #f1f9f8;
+}
+
+.h5p-interactive-book-astro-summary-menu-button:hover
+  .h5p-interactive-book-astro-summary-menu-button-arrow {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(90deg) translateY(-10px);
+}
+
+.h5p-interactive-book-astro-summary-menu-button[data-book-completed="true"],
+.h5p-interactive-book-astro-summary-menu-button:active {
+  box-shadow: 0 0 0.625rem #0cc9a7;
+}
+
+.h5p-interactive-book-astro-summary-menu-button
+  .h5p-interactive-book-astro-summary-text {
+  white-space: normal;
+  text-align: left;
+  height: 100%;
+  flex-grow: 2;
+  margin-right: 0.75rem;
+}
+
+.h5p-interactive-book-astro-summary-menu-button
+  .h5p-interactive-book-astro-summary-icon {
+  margin-right: 0.25rem;
+  margin-left: auto;
+  font-size: 1.1em;
+}
+
+.h5p-interactive-book-astro-summary-menu-button
+  .h5p-interactive-book-astro-summary-menu-button-arrow {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 25px;
+  visibility: hidden;
+  opacity: 0;
+  height: auto;
+  font-weight: normal;
+  transition: transform 0.4s, opacity 0.2s, visibility 0.2s;
+}
+
+.h5p-interactive-book-astro-summary-menu-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.h5p-interactive-book-astro-navigation-summary-button {
+  padding: 1.125rem 0.5rem;
+}
+
+.h5p-interactive-book-astro-summary-page {
+  padding: 1.25rem;
+}
+
+.h5p-interactive-book-astro-summary-page ol,
+.h5p-interactive-book-astro-summary-page ul,
+.h5p-interactive-book-astro-summary-page li {
+  padding-left: 0;
+}
+
+.h5p-interactive-book-astro-summary-page .h5p-interactive-box-summary-progress {
+  display: flex;
+  justify-content: space-between;
+  color: #273c59;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progress-container {
+  background-color: var(--color-grey-alpha-30);
+  width: 49%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progress-container
+  .absolute-value {
+  color: #273c59;
+  font-size: 1.25em;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progress-container
+  .separator {
+  color: #273c59;
+  font-size: 0.75em;
+  margin: auto 0.4em;
+  vertical-align: top;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progress-container:last-child {
+  margin-right: 0;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  h3 {
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.25rem;
+  margin-top: 0;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progressbox-bigtext {
+  font-size: 1.375rem;
+  color: var(--color-contrast);
+  margin: 0.4375rem auto;
+  font-weight: bold;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-box-summary-progress
+  .h5p-interactive-book-astro-summary-progressbox-smalltext {
+  font-size: 0.875rem;
+  color: #273c59;
+  font-style: italic;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons {
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-button {
+  border-radius: 4px;
+  padding: 0.6125rem 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-button
+  .icon-restart,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-button
+  .icon-paper-pencil {
+  margin-right: 0.5rem;
+  font-size: 1.1875rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submit {
+  background-color: #0e7c57;
+  color: var(--color-white);
+  border: 1px solid #0e7c57;
+  transition: background-color 150ms;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submit:hover {
+  background-color: #0c694a;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-restart {
+  color: #757575;
+  border: 1px solid #ebebeb;
+  background-color: var(--color-white);
+  transition: background-color 150ms;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-restart:hover {
+  background-color: #ebebeb;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submitted {
+  transform: translateY(100%);
+  transition: transform 0.4s;
+  position: absolute;
+  opacity: 0;
+  border-radius: 4px;
+  background-color: #d3ede9;
+  display: flex;
+  padding: 0.4375rem;
+  align-items: center;
+  flex: auto;
+  left: 2000px;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submitted
+  .icon-chapter-done {
+  font-size: 2rem;
+  margin: 0.5625rem 1rem;
+  color: #0e8275;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submitted
+  p {
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.875rem;
+  color: #0e8275;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submitted
+  .h5p-interactive-book-astro-summary-restart {
+  margin-left: auto;
+  padding: 0.5615rem;
+  flex-grow: initial;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons
+  .h5p-interactive-book-astro-summary-submitted
+  button {
+  display: none;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons.submitted
+  > button {
+  display: none;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons.submitted
+  .h5p-interactive-book-astro-summary-submitted {
+  transform: translateY(0);
+  opacity: 1;
+  position: static;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-buttons.submitted
+  .h5p-interactive-book-astro-summary-submitted
+  button {
+  display: flex;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-header
+  select {
+  margin: auto 0 auto auto;
+  max-height: 1.5rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.9375rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-only-unanswered
+  .h5p-interactive-book-astro-summary-overview-section-details-task-done,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-only-unanswered
+  .h5p-interactive-book-astro-summary-no-interactions {
+  display: none;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty {
+  padding: 0.875rem 1.25rem;
+  border: 1px solid #e8e8e8;
+  border-bottom: 0;
+  display: block;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section
+  h4,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty
+  h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section
+  h4:hover,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty
+  h4:hover {
+  color: var(--color-contrast);
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section
+  h4
+  span[class^="icon-"],
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty
+  h4
+  span[class^="icon-"],
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section
+  h4
+  span[class*=" icon-"],
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty
+  h4
+  span[class*=" icon-"] {
+  margin-left: auto;
+  color: var(--color-contrast);
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section:first-of-type,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty:first-of-type,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-top-section {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section:last-of-type,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty:last-of-type,
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-bottom-section {
+  border-bottom: 1px solid #ebebeb;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-score-header {
+  display: flex;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-score-header
+  div {
+  font-size: 0.875rem;
+  margin-left: auto;
+  line-height: 2rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-list-empty {
+  display: none;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-details {
+  display: flex;
+  border-top: 1px solid #ebebeb;
+  padding: 0.25rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-details:hover {
+  background: #f3f3f3;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-details
+  .h5p-interactive-book-astro-summary-section-title {
+  font-size: 0.875rem;
+  border: 0;
+  background-color: var(--color-transparent);
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-overview-section-details
+  .h5p-interactive-book-astro-summary-section-score {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-section-icon {
+  margin-right: 0.6125rem;
+  color: var(--color-contrast);
+  font-size: 0.8125rem;
+  align-items: center;
+  display: flex;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-chapter-subheader {
+  font-style: italic;
+  color: #737285;
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-progress-circle {
+  width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+  border: 6px solid #f4f4f4;
+  box-shadow: 0 0 0 4px var(--color-grey-alpha-50);
+  margin-left: auto;
+  position: relative;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-progress-circle
+  canvas {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-score-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.h5p-interactive-book-astro-summary-page
+  .h5p-interactive-book-astro-summary-no-chapter-interactions
+  p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.h5p-interactive-book-astro-summary-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  height: 5rem;
+  box-shadow: -5px -5px 10px var(--color-grey-alpha-40);
+  display: flex;
+  padding: 1rem;
+  box-sizing: border-box;
+  transform: translateY(120%);
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+.h5p-interactive-book-astro-summary-footer.show-footer {
+  transform: translateY(0);
+}
+
+.h5p-interactive-book-astro-summary-footer.menu-open {
+  display: none;
+}
+
+.h5p-interactive-book-astro-summary-footer button {
+  flex: auto;
+}
+
+.h5p-interactive-book-astro-summary-dropdown {
+  position: relative;
+  max-width: 200px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  margin-left: auto 0.0625rem auto auto;
+  font-size: 0.875rem;
+  min-width: 12rem;
+}
+
+.h5p-interactive-book-astro-summary-dropdown > button {
+  cursor: pointer;
+}
+
+.h5p-interactive-book-astro-summary-dropdown[active]
+  .h5p-interactive-book-astro-summary-dropdown-menu {
+  display: block;
+  box-shadow: 0 2px 3px 2px var(--color-black-alpha-15);
+}
+
+.h5p-interactive-book-astro-summary-dropdown[active]
+  .h5p-interactive-book-astro-summary-dropdown-menu
+  button {
+  background-color: var(--color-white);
+}
+
+.h5p-interactive-book-astro-summary-dropdown[active] button {
+  background-color: #fafafa;
+  cursor: pointer;
+  text-align: left;
+}
+
+.h5p-interactive-book-astro-summary-dropdown
+  .h5p-interactive-book-astro-summary-dropdown-menu {
+  position: absolute;
+  list-style: none;
+  display: none;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.h5p-interactive-book-astro-summary-dropdown button {
+  display: flex;
+  width: 100%;
+  border: 0;
+  background: var(--color-transparent);
+  align-items: center;
+  font-size: inherit;
+  padding: 0.5rem 0.6875rem;
+}
+
+.h5p-interactive-book-astro-summary-dropdown button .icon-expanded {
+  margin-left: auto;
+  font-size: 0.5rem;
+}
+
+/* --- General Content & Text Styles --- */
+
+.h5p-emphasi .type-icon-container {
+  box-shadow: var(--color-black-alpha-15) 4px 5px 8px;
+}
+
+.tox .tox-dialog {
+  align-self: flex-start;
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+h3 {
+  color: var(--color-primary);
+}
+
+.h5p-interactive-book-astro h2 {
+  color: var(--color-primary);
+}
+
+.h5p-interactive-book-astro h3 {
+  color: var(--color-primary);
+}
+
+.h5p-interactive-book-status-chapter .title {
+  color: var(--color-primary);
+}
+
+.h5p-interactive-book-navigation-maintitle .navigation-title {
+  font-weight: bold;
+  padding: 0.8em;
+}
+
+.h5p-interactive-book-navigation-chapter-button
+  .h5p-interactive-book-navigation-chapter-title-text {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.h5p-image > img {
+  width: 90% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.h5p-interactive-book-status .h5p-interactive-book-status-button {
+  border-radius: 15px;
+}
+
+.h5p-interactive-book-navigation {
+  box-shadow: none;
+  border-radius: 15px;
+}
+
+.h5p-interactive-book-status {
+  box-shadow: none;
+}
+
+.h5p-interactive-book-navigation-maintitle {
+  background-color: var(--color-primary);
+}
+
+.h5p-interactive-book-status-menu.h5p-interactive-book-status-menu-active {
+  background-color: var(--color-primary);
+}
+
+.h5p-interactive-book-navigation-chapter-button {
+  color: var(--color-primary) !important;
+  text-decoration: none solid var(--color-primary);
+}
+
+a:link {
+  color: var(--color-interactive-link);
+  text-decoration: none !important;
+  transition: color 0.2s ease-in-out;
+}
+
+a:visited {
+  color: var(--color-primary-dark);
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-interactive-link-hover);
+  text-decoration: underline !important;
+}
+
+a:active {
+  color: var(--color-interactive-link-hover);
+  text-decoration: underline !important;
+}
+
+.h5p-column-ruler {
+  border-bottom: 15px;
+}
+
+.h5p-interactive-book-navigation-sectionlist
+  .h5p-interactive-book-navigation-section
+  .h5p-interactive-book-navigation-section-title {
+  color: var(--color-text-subtle);
+}
+
+.h5p-interactive-book-navigation-sectionlist
+  .h5p-interactive-book-navigation-section {
+  background: var(--color-bg-interactive);
+}
+
+li.h5p-image-slider-progress-element.h5p-image-slider-current-progress-element:only-child {
+  display: none;
+}
+
+::marker {
+  color: var(--color-primary);
+}
+
+.h5p-advanced-text ul > li {
+  list-style-type: disc;
+}
+
+.h5p-interactive-book-navigation-sectionlist > :first-child {
+  margin-top: 0;
+}
+
+.icon-chapter-blank::before {
+  content: none;
+}
+
+.h5p-interactive-book-main.h5p-interactive-book-navigation-open
+  .h5p-interactive-book-navigation {
+  max-width: 50%;
+  width: 40vw;
+}
+
+/* --- H5P Content Type: Single Choice Set --- */
+
+.h5p-single-choice-set .h5p-question-content {
+  background-color: var(--color-secondary);
+  padding: 5vw;
+  border-radius: 20px;
+}
+
+.h5p-sc-sound-control {
+  color: var(--color-text-on-secondary);
+  padding-top: 4.6vw;
+  padding-right: 5.5vw;
+}
+
+.h5p-sc-question {
+  color: var(--color-text-on-secondary);
+}
+
+li.h5p-sc-alternative .h5p-sc-label {
+  color: var(--color-secondary);
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+  background-color: var(--color-white);
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative {
+  box-shadow: none;
+  background: var(--color-secondary-light);
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+  box-shadow: none;
+}
+
+.h5p-joubelui-progressbar-background {
+  top: -2px;
+  height: 200%;
+}
+
+.h5p-joubelui-progressbar {
+  width: 82%;
+  margin: 0 auto;
+  margin-bottom: 3vw;
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar {
+  background-color: var(--color-white);
+}
+
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-correct,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-correct:hover,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-correct:active,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-correct:focus {
+  background: var(--color-success) !important;
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-white);
+}
+
+li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-reveal-correct .h5p-sc-label {
+  color: var(--color-white);
+}
+
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:hover,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:active,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-reveal-wrong.h5p-sc-selected:focus,
+ul.h5p-sc-alternatives.h5p-sc-selected
+  li.h5p-sc-alternative.h5p-sc-is-wrong.h5p-sc-selected.h5p-sc-reveal-wrong
+  .h5p-sc-progressbar {
+  background: var(--color-danger);
+}
+
+.h5p-single-choice-set .h5p-question-content::before {
+  content: "";
+  height: 60px;
+  width: 180px;
+  background-image: url(https://iili.io/JfbjXi7.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  z-index: 1;
+}
+
+/* --- H5P Content Type: Drag Text --- */
+
+.h5p-drag-text {
+  overflow: visible;
+}
+
+.h5p-drag-text .h5p-question-content::before {
+  content: "";
+  height: 60px;
+  width: 180px;
+  background-image: url(https://iili.io/JfbjXi7.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -72px;
+  left: 0;
+  z-index: 1;
+}
+
+/* --- General Question Styles --- */
+
+.h5p-question {
+  margin-left: 4px;
+  margin-top: 80px;
+}
+
+.h5p-question-content {
+  margin: 1em !important;
+}
+
+@media (max-width: 768px) {
+  .h5p-question-content::before {
+    max-width: 160px;
+    height: 60px;
+    top: -32px;
+    left: -8px;
+  }
+
+  .h5p-question {
+    margin-left: 0.1vh;
+    margin-top: 0.25vh;
+  }
+
+  .h5p-question-content {
+    margin: -0.03em !important;
+  }
+
+  .h5p-joubelui-progressbar {
+    width: 85%;
+  }
+}
+
+.h5p-question-feedback {
+  color: var(--color-white);
+}
+
+.h5p-joubelui-score-bar-progress {
+  background: linear-gradient(
+    to right,
+    var(--color-success),
+    var(--color-success)
+  );
+}
+
+li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-drummed > .h5p-sc-label {
+  color: var(--color-white);
+}
+
+ul.h5p-sc-alternatives
+  li.h5p-sc-alternative.h5p-sc-is-correct.h5p-sc-selected.h5p-sc-reveal-correct
+  .h5p-sc-progressbar {
+  background: var(--color-success);
+}
+
+li.h5p-sc-alternative.h5p-sc-is-wrong.h5p-sc-drummed > .h5p-sc-label {
+  color: var(--color-white);
+}
+
+/* --- H5P Column & General Content --- */
+
+.h5p-column-content table {
+  width: 100%;
+}
+
+.h5p-interactive-book-content .h5p-column-content:first-child {
+  margin-top: 1em;
+}
+
+.titulo_2 {
+  margin-left: 8px;
+}
+
+.titulo_3 {
+  margin-left: 16px;
+}
+
+.titulo_4 {
+  margin-left: 24px;
+}
+
+blockquote {
+  padding-left: 48px;
+}
+
+/* --- H5P Content Type: Video --- */
+
+div.h5p-column-content.h5p-video {
+  margin: 32px;
+  margin-top: 48px;
+  padding: 32px;
+  padding-top: 64px;
+  background: var(--color-bg-highlight);
+  border-radius: 16px;
+}
+
+div.h5p-column-content.h5p-video::before {
+  content: "";
+  height: 60px;
+  width: 180px;
+  background-image: url(https://iili.io/JG9boxf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 400px) {
+  .h5p-youtube,
+  div.h5p-column-content.h5p-video {
+    margin: 40px;
+    margin-inline: 12px;
+    padding: 12px;
+    padding-top: 24px;
+  }
+
+  .h5p-youtube::before,
+  div.h5p-column-content.h5p-video::before {
+    max-width: 160px;
+    height: 60px;
+    top: -32px;
+    left: -8px;
+  }
+}
+
+.h5p-image-slide-image-holder {
+  background-color: var(--color-white);
+}
+
+/* --- H5P Content Type: Single Choice Set (Purple Theme Override) --- */
+
+.h5p-single-choice-set .h5p-question-content {
+  background-color: var(--color-white);
+  padding: 5vw;
+  border-radius: 20px;
+  border: solid 2px var(--color-primary);
+}
+
+.h5p-single-choice-set .h5p-sc-question p {
+  font-size: 1em;
+  margin: 0.75em 0;
+  color: var(--color-primary);
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative {
+  box-shadow: none;
+  background: var(--color-primary);
+  transition: 0.3s;
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative:hover {
+  box-shadow: none;
+  background: #5568fc;
+}
+
+.h5p-single-choice-set .h5p-question-content::before {
+  content: "";
+  height: 60px;
+  width: 180px;
+  background-image: url(01e9044e24a30c82dd1f.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  z-index: 1;
+}
+
+li.h5p-sc-alternative .h5p-sc-label p:last-child {
+  margin-bottom: 0;
+  color: var(--color-white);
+}
+
+.h5p-sc-sound-control {
+  color: var(--color-primary);
+  padding-top: 4.6vw;
+  padding-right: 5.5vw;
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+  background-color: var(--color-primary);
+}
+
+/* --- Icon Font Definitions --- */
+
+@font-face {
+  font-family: "h5p-book";
+  font-style: normal;
+  font-weight: normal;
+  src: url(8dc8cf1d96ae9353dbac.eot?a3wrpr#iefix) format("embedded-opentype"),
+    url(3fbecededfe43dabfbb2.ttf?a3wrpr) format("truetype"),
+    url(00f1d21bbce2734619cf.woff?a3wrpr) format("woff"),
+    url(c15cb97e9d7a5ebe0220.svg?a3wrpr#h5p-interactive-book-astro)
+      format("svg");
+}
+
+.h5p-interactive-book-astro [class^="icon-"],
+.h5p-interactive-book-astro [class*=" icon-"] {
+  font-family: "h5p-book";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+}
+
+.icon-close ::before {
+  content: "";
+}
+
+.icon-expanded::before {
+  content: "";
+}
+
+.icon-collapsed::before {
+  content: "";
+}
+
+.icon-chapter-started::before {
+  content: "";
+}
+
+.icon-chapter-done::before {
+  content: "";
+}
+
+.icon-check-mark::before {
+  content: "";
+}
+
+.icon-chapter-blank::before {
+  content: "";
+}
+
+.icon-menu::before {
+  content: "";
+}
+
+.icon-previous::before {
+  content: "";
+}
+
+.icon-next::before {
+  content: "";
+}
+
+.icon-up::before {
+  content: "";
+}
+
+.icon-question-answered::before {
+  content: "";
+}
+
+.icon-enable-fullscreen::before {
+  content: "";
+}
+
+.icon-disable-fullscreen::before {
+  content: "";
+}
+
+.icon-restart::before {
+  content: "";
+}
+
+.icon-paper-pencil::before {
+  content: "";
+}
+
+.icon-paper::before {
+  content: "";
+}
+
+/* --- Core H5P Button & UI Overrides --- */
+
+.h5p-confirmation-dialog-header {
+  color: var(--color-base);
+}
+
+button.h5p-core-button {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+button.h5p-core-button:link,
+button.h5p-core-button:visited {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+button.h5p-core-button:hover {
+  background: var(--color-base-85);
+  color: var(--color-text);
+}
+
+button.h5p-core-button:focus {
+  background: var(--color-base-85);
+  color: var(--color-text);
+}
+
+button.h5p-core-button:active {
+  background: var(--color-base-80);
+  color: var(--color-text);
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button,
+.h5p-joubelui-button {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button:hover,
+.h5peditor .ui-dialog .h5p-joubelui-button:focus,
+.h5p-joubelui-button:hover,
+.h5p-joubelui-button:focus {
+  background: var(--color-base-85);
+  color: var(--color-text);
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button:active,
+.h5p-joubelui-button:active {
+  background: var(--color-base-80);
+  box-shadow: inset 0 4px 0 var(--color-base-75);
+  color: var(--color-text);
+}
+
+.joubel-simple-rounded-button {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.joubel-simple-rounded-button:hover,
+.joubel-simple-rounded-button:focus {
+  background: var(--color-base-85);
+  color: var(--color-text);
+}
+
+.joubel-simple-rounded-button:active {
+  background: var(--color-base-80);
+  box-shadow: inset 0 4px 0 var(--color-base-75);
+  color: var(--color-text);
+}
+
+.h5p-joubelui-score-bar .joubel-tip-container {
+  color: var(--color-base);
+}
+
+.h5p-joubelui-progressbar-background {
+  background-color: var(--color-base-80);
+}
+
+.h5p-audio-inner .h5p-audio-minimal-button {
+  background: var(--color-base);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, var(--color-base)),
+    color-stop(100%, var(--color-base-90))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    var(--color-base) 0%,
+    var(--color-base-90) 100%
+  );
+  color: var(--color-text);
+}
+
+.h5p-course-presentation .h5p-progressbar .h5p-progressbar-part-show {
+  background: var(--color-base);
+  background-image: -webkit-linear-gradient(
+    top,
+    var(--color-base),
+    var(--color-base-90)
+  );
+  background-image: -moz-linear-gradient(
+    top,
+    var(--color-base),
+    var(--color-base-90)
+  );
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-base),
+    var(--color-base-90)
+  );
+}
+
+.h5p-course-presentation .h5p-element-button {
+  background: var(--color-base);
+  border-color: var(--color-base-90);
+  color: var(--color-text);
+}
+
+.h5p-course-presentation .h5p-element-button:hover {
+  background: var(--color-base-85);
+  border-color: var(--color-base);
+}
+
+.h5p-course-presentation
+  .h5p-keywords-wrapper
+  > [role="menu"]::-webkit-scrollbar-thumb {
+  background: var(--color-base);
+}
+
+.h5p-course-presentation
+  .h5p-keywords-wrapper
+  > [role="menu"]::-webkit-scrollbar-thumb:hover {
+  background: var(--color-base-85);
+}
+
+.h5p-course-presentation
+  .h5p-keywords-wrapper
+  > [role="menu"]
+  > [role="menuitem"]:hover
+  span {
+  color: var(--color-base);
+}
+
+.h5p-course-presentation
+  .h5p-element
+  .h5p-element-outer::-webkit-scrollbar-thumb,
+.h5p-course-presentation
+  .h5p-element
+  .h5p-element-outer
+  .h5p-element-inner::-webkit-scrollbar-thumb,
+.h5p-course-presentation .h5p-summary-table-pages::-webkit-scrollbar-thumb {
+  background: var(--color-base);
+}
+
+.h5p-table-scroll th {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
+}
+
+.h5p-course-presentation
+  .h5p-element
+  .h5p-element-outer::-webkit-scrollbar-thumb:hover,
+.h5p-course-presentation
+  .h5p-element
+  .h5p-element-outer
+  .h5p-element-inner::-webkit-scrollbar-thumb:hover,
+.h5p-course-presentation
+  .h5p-summary-table-pages::-webkit-scrollbar-thumb:hover {
+  background: var(--color-base-85);
+}
+
+.h5p-documentation-tool-nav-button:before {
+  color: var(--color-text);
+}
+
+.h5p-documentation-tool-nav-button.next:before {
+  color: var(--color-text);
+}
+
+.h5p-free-text-question-text-wrapper {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-guess-answer .show-solution-button {
+  background-color: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-guess-answer .show-solution-button:hover,
+.h5p-guess-answer .show-solution-button:focus {
+  background: var(--color-base-85);
+}
+
+.h5p-guess-answer .show-solution-button:active {
+  background: var(--color-base-80);
+  box-shadow: inset 0 4px 0 var(--color-base-75);
+}
+
+.h5p-gotoquestion-text {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-gotoquestion-button[aria-disabled="false"]:hover,
+.h5p-gotoquestion-button[aria-disabled="false"]:focus {
+  color: var(--color-base);
+}
+
+.h5p-gotoquestion-button[aria-disabled="false"]:hover:after,
+.h5p-gotoquestion-button[aria-disabled="false"]:focus:after {
+  border-bottom-color: var(--color-base);
+}
+
+.h5p-memory-reset {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-memory-reset:hover,
+.h5p-memory-reset:focus {
+  background: var(--color-base-85);
+}
+
+.h5p-questionnaire .h5p-open-ended-question-question {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-question-feedback {
+  color: var(--color-base);
+}
+
+.h5p-questionnaire-submit-screen {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-questionnaire-submit-screen .h5p-questionnaire-button.previous {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.h5p-questionnaire-submit-screen .h5p-questionnaire-button.previous:hover {
+  background-color: var(--color-base-85);
+}
+
+.h5p-questionnaire-submit-screen .h5p-questionnaire-button.previous:active {
+  background-color: var(--color-base-80);
+}
+
+.h5p-questionnaire-success {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-questionnaire-button.submit {
+  background: var(--color-base);
+  border-color: var(--color-base);
+  filter: hue-rotate(180deg);
+}
+
+.h5p-questionnaire-button.submit:hover {
+  background-color: var(--color-base-85);
+}
+
+.h5p-questionnaire-button.submit:active {
+  background-color: var(--color-base-80);
+}
+
+.h5p-questionnaire-progress-bar-widget {
+  background-color: var(--color-text);
+}
+
+.h5p-questionnaire-progress-bar-current {
+  background: var(--color-base);
+  filter: hue-rotate(180deg);
+}
+
+.h5p-questionnaire-progress-bar-widget-current {
+  color: var(--color-base);
+  filter: hue-rotate(180deg);
+}
+
+.questionset .progress-dot.answered {
+  background: var(--color-base);
+}
+
+.questionset .progress-dot.current {
+  background: var(--color-base-80);
+}
+
+.h5p-questionnaire .h5p-simple-multiple-choice-question {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+  background-color: var(--color-base);
+}
+
+.h5p-timeline .vco-storyjs a {
+  color: var(--color-base) !important;
+}
+
+.h5p-timeline .vco-storyjs a:hover,
+.h5p-timeline .vco-storyjs a:active {
+  color: var(--color-base-85) !important;
+}
+
+.h5p-timeline .vco-timeline .vco-navigation .timenav-background .timenav-line {
+  background-color: var(--color-base) !important;
+}
+
+.h5p-timeline
+  .vco-timeline
+  .vco-navigation
+  .timenav
+  .content
+  .marker.active
+  .flag
+  .flag-content
+  h3,
+.h5p-timeline
+  .vco-timeline
+  .vco-navigation
+  .timenav
+  .content
+  .marker.active
+  .flag-small
+  .flag-content
+  h3 {
+  color: var(--color-base) !important;
+}
+
+.h5p-timeline
+  .vco-timeline
+  .vco-navigation
+  .timenav
+  .content
+  .marker.active
+  .dot,
+.h5p-timeline
+  .vco-timeline
+  .vco-navigation
+  .timenav
+  .content
+  .marker.active
+  .line {
+  background: var(--color-base) !important;
+}
+
+.h5p-timeline
+  .vco-timeline
+  .vco-navigation
+  .timenav
+  .content
+  .marker
+  .line
+  .event-line {
+  background: var(--color-base) !important;
+}
+
+/* --- Media Queries & Responsive --- */
+
+@media (max-width: 768px) {
+  .character_image {
+    position: absolute;
+    bottom: -20px;
+    right: -98px;
+    width: 150px;
+  }
+}
+
+/* --- Custom Content: Audio Chat Box --- */
+
+.h5p-proitec-audios .chat-box {
+  background-color: var(--color-bg-dialog);
+  border-radius: 1px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  width: 608px;
+  margin: auto;
+  overflow-y: scroll;
+  max-height: 280px;
+}
+
+@media screen and (max-width: 768px) {
+  .h5p-proitec-audios .chat-box {
+    width: 95%;
+    padding: 10px;
+    max-height: 300px;
+  }
+
+  .chat-header,
+  .chat-footer {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .chat-header-name {
+    font-size: 16px;
+  }
+
+  .chat-header-img,
+  .chat-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .audio-bubble {
+    max-width: 95%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .transcript {
+    font-size: 13px;
+  }
+
+  .transcript-div {
+    max-width: 95%;
+    font-size: 13px;
+  }
+
+  .chat-footer-msg {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .custom-audio-player {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .volume-bar {
+    width: 80%;
+  }
+
+  .sound-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .time-display {
+    font-size: 11px;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .chat-header-name {
+    font-size: 15px;
+  }
+
+  .transcript,
+  .transcript-div {
+    font-size: 12px;
+  }
+
+  .chat-footer-msg {
+    font-size: 13px;
+  }
+
+  .volume-bar {
+    width: 100%;
+  }
+
+  .custom-audio-player {
+    gap: 6px;
+  }
+}
+
+/* --- Custom Content: Video Container --- */
+
+@media (max-width: 768px) {
+  .video_container_principal {
+    margin: 40px 20px 30px 20px;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .video_icon_title_container {
+    flex-direction: row;
+    height: 30px;
+    top: -35px;
+    left: -15px;
+    min-width: auto;
+    padding: 10px 15px;
+    border-radius: 30px;
+    gap: 0.5rem;
+  }
+
+  .video_icon_container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .video_title {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .video_character_container {
+    display: none; /* Oculta personagem decorativo em telas pequenas */
+  }
+
+  .video_button {
+    padding: 0.7em 1.2em;
+    font-size: 16px;
+    margin: 8px;
+  }
+
+  .divButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .video_content,
+  .video_iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* --- H5P Content Type: Image Overrides --- */
+
+.h5p-single-choice-set .h5p-question-content::before {
+  background-image: url(https://iili.io/FTFCr67.png) !important;
+}
+
+/* --- H5P Content Type: Multichoice --- */
+
+.h5p-multichoice {
+  background-color: var(--color-white) !important;
+  border-radius: 20px !important;
+  border: solid 2px var(--color-primary) !important;
+  padding: 5vw !important;
+}
+
+.h5p-multichoice .h5p-alternative-container {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+/* --- H5P Content Type: Image Overrides (Final) --- */
+
+.h5p-single-choice-set .h5p-question-content::before {
+  background-image: url(https://iili.io/F74DPiF.png) !important;
+}
+
+.h5p-drag-text .h5p-question-content::before {
+  background-image: url(https://iili.io/F74DPiF.png) !important;
+  top: -52px !important;
+}
+
+.h5p-multichoice .h5p-question-content::before {
+  background-image: url(https://iili.io/F74DPiF.png) !important;
+}
+
+.container_sem_imagem {
+  padding: 1rem 1rem !important;
+}
+
+/* --- Custom Table Styles --- */
+
+.h5p-table-scroll tr:first-child {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: bold;
+    text-align: center;
+}
+
+.h5p-table-scroll tr:first-child td {
+    border-color: var(--color-primary) var(--color-white) var(--color-primary) var(--color-white);
+}
+
+.h5p-table-scroll tr:first-child td:first-child {
+    border-left-color: var(--color-primary);
+}
+
+.h5p-table-scroll tr:first-child td:last-child {
+    border-right-color: var(--color-primary);
+}
+
+.h5p-table-scroll td {
+    border: 2px solid var(--color-border-table);
+    text-align: left;
+    padding: 12px 15px;
+    width: 25%;
+    background-color: var(--color-bg-subtle);
+    color: var(--color-text-primary);
+    font-size: 1em;
+}
+
+.h5p-table-scroll {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.h5p-table-scroll tr:nth-child(even) {
+    background-color: var(--color-teal-alpha-20);
+}
+
+.h5p-table-scroll tr:hover {
+    background-color: var(--color-primary-hover-bg);
+}
+
+.h5p-table-scroll tr:first-child td:first-child {
+    border-right-color: var(--color-primary);
+}
+
+.h5p-table th,
+.h5p-table td {
+  border-color: var(--color-base) !important;
+}
+
+.h5p-table th {
+  background-color: var(--color-base) !important;
+}
+
+.h5p-table tr:first-child td {
+  background-color: var(--color-base) !important;
+  border-color: var(--color-primary-dark) !important;
+}
+
+.h5p-table tr:nth-child(even),
+.h5p-table tr:nth-child(odd) {
+  background-color: var(--color-bg-subtle) !important;
+}
+
+/* --- H5P Button Hover/Focus Overrides --- */
+
+/* Estilo para quando o mouse passa por cima da alternativa */
+.h5p-multichoice .h5p-alternative-container:hover {
+  background-color: var(
+    --color-primary-dark
+  ) !important; /* Um tom de ametista mais claro */
+  box-shadow: 0 4px 15px var(--color-black-alpha-20) !important;
+}
+
+/* Estilo para quando a alternativa está selecionada (foco de acessibilidade) */
+.h5p-multichoice .h5p-alternative-container:focus,
+.h5p-multichoice .h5p-alternative-container:focus-within {
+  background-color: var(--color-primary-dark) !important;
+  outline: 2px solid var(--color-white) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 12px var(--color-primary-focus-shadow-alt) !important; /* Brilho correspondente */
+}
+
+/* Estilo para quando o mouse passa por cima dos botões */
+.h5p-joubelui-button:hover,
+.h5p-question-check-answer:hover,
+.h5p-question-show-solution:hover,
+.h5p-question-retry:hover {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(
+    --color-primary-dark
+  ) !important; /* Garante que a borda mude de cor também */
+  box-shadow: 0 4px 15px var(--color-black-alpha-20) !important;
+}
+
+/* Estilo para quando os botões estão selecionados (foco de acessibilidade) */
+.h5p-joubelui-button:focus,
+.h5p-question-check-answer:focus,
+.h5p-question-show-solution:focus,
+.h5p-question-retry:focus {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  outline: 2px solid var(--color-white) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 12px var(--color-primary-focus-shadow) !important;
+}
